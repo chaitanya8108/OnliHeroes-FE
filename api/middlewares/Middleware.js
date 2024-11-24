@@ -8,7 +8,7 @@ const configureMiddlewares = (app) => {
   app.use(express.json()); // Parse JSON request bodies
   app.use(
     cors({
-      origin: ["https://onliheroes.netlify.app/home", "http://localhost:5173"],
+      origin: ["https://onliheroes.netlify.app", "http://localhost:5173"],
     })
   ); // Enable CORS
   app.use("/actors", actorRouter); // Use actors router
