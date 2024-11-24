@@ -10,7 +10,7 @@ const Header = () => {
           <IoBookSharp id="booklogo" />
         </Link>
         <Link to="/home" id="title" style={{ userSelect: "none" }}>
-          onlyHeroes
+          onliHeroes
         </Link>
         <button
           className="navbar-toggler"

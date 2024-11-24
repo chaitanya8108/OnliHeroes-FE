@@ -59,7 +59,7 @@ const AddActor = () => {
 
   return (
     <div className="container addContainer">
-      <h2 className="addText text-center mb-4 bg-white text-black">Add your OnlyHero</h2>
+      <h2 className="addText text-center mb-4 bg-white text-black">Add your OnliHero</h2>
       {status && (
         <Alert className={status.includes("Error") ? "danger" : "success"}>
           {status}
