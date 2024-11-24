@@ -3,7 +3,7 @@ import "../styles/Home.css";
 import axios from "axios";
 import HeroCard from "../components/HeroCard";
 
-const API = "http://localhost:5001/actors";
+const API = "https://onliheroes.netlify.app/actors";
 
 const Home = () => {
   const [actors, setActors] = useState([]);
