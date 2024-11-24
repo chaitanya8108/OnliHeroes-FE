@@ -3,7 +3,7 @@ import axios from "axios";
 import { Alert } from "react-bootstrap";
 import "../styles/AddActor.css";
 
-const API = "http://localhost:5000/actors";
+const API = "https://onliheroes.netlify.app/actors";
 
 const AddActor = () => {
   const [name, setName] = useState("");
