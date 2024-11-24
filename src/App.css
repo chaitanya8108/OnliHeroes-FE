@@ -1,0 +1,28 @@
+.mainDiv {
+  margin: 0rem;
+  /* padding-top: 15rem; */
+  /* padding-bottom: auto; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  /* overflow-y: scroll; */
+  overflow-x: hidden;
+  /* overflow-y: hidden; */
+}
+
+@media(max-width: 768px){
+  .mainDiv{
+    height: auto;
+  }
+}
+
+@media(max-width: 480px){
+  .mainDiv{
+    display: flex;
+    height: auto;
+    background-color: white;
+  }
+}

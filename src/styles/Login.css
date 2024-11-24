@@ -1,0 +1,24 @@
+@media (min-width: 768px) {
+  .loginContainer {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .loginContainer:hover {
+    transform: scale(1.02);
+  }
+
+  
+}
+
+@media(max-width: 700px){
+    .mainLoginContainer{
+        margin: 1rem 0 1rem 0;
+        border-radius: 10px;
+    }
+    .leftDiv{
+        max-height: 50vh;
+      }
+      .leftDiv > img {
+        min-width: 100%;
+      }
+}

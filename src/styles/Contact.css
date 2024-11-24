@@ -1,0 +1,20 @@
+.contactContainer{
+    transition: transform 0.3s ease-in-out;
+}
+
+.contactContainer:hover {
+transform: scale(1.02);
+}
+
+@media(max-width: 700px){
+    .mainContactContainer{
+        margin: 1rem 0 1rem 0;
+        border-radius: 10px;
+    }
+    .leftDiv2{
+        max-height: 50vh;
+      }
+      .leftDiv2 > img {
+        min-width: 100%;
+      }
+}

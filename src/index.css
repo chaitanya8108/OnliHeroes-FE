@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  /* overflow-x: hidden; */
+  margin: 0;
+  padding: 0;
+  background: white;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-behavior: smooth;
+}
+
+/* .container {
+  position: relative;
+  padding-top: 60px; 
+} */

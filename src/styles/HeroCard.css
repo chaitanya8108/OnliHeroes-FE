@@ -1,0 +1,38 @@
+.charImg {
+  max-height: 250px;
+}
+
+.cardContainer {
+  /* overflow: hidden; */
+  max-height: -webkit-fill-available;
+}
+
+@media(max-width: 600px){
+  .charImg{
+    max-height: 350px;
+  }
+}
+
+@media(min-width: 700px){
+  .cardContainer {
+    flex-direction: column;
+  }
+  .cardCard {
+    min-width: fit-content;
+  }
+}
+
+@media(min-width: 800px){
+  .cardContainer {
+    flex-direction: column;
+  }
+  .cardCard {
+    width: -webkit-fill-available;
+  }
+}
+
+@media(min-width: 1300px){
+  .cardContainer{
+   flex-direction: row;
+  }
+}
