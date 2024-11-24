@@ -12,14 +12,8 @@ const Home = () => {
   const getData = async () => {
     try {
       const response = await axios.get(API);
-      console.log("API Response:", response.data); // Log the response to inspect its structure
-      if (Array.isArray(response.data)) {
-        setActors(response.data);
-      } else if (Array.isArray(response.data.actors)) {
-        setActors(response.data.actors); // If actors are inside a property 'actors'
-      } else {
-        console.error("Data format is incorrect, expected an array.");
-      }
+      console.log(response.data);
+      setActors(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
