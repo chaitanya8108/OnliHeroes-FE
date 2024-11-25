@@ -9,6 +9,7 @@ const configureMiddlewares = (app) => {
   app.use(
     cors({
       origin: ["https://onliheroes.netlify.app", "http://localhost:5173"],
+      methods: ["GET", "POST", "PUT", "DELETE"],
     })
   ); // Enable CORS
   app.use("/actors", actorRouter); // Use actors router
