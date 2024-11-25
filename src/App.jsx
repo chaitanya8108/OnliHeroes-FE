@@ -17,7 +17,7 @@ function App() {
         <Header />
         <div className="container mainDiv" style={{background: `url(${marvel})`, backgroundPosition: "center", backgroundSize: "cover"}}>
           <Routes>
-            <Route path="/home" element={<Home />} />
+            <Route path="/actors" element={<Home />} />
             <Route path="/add" element={<AddActor />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />

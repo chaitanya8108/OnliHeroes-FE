@@ -3,51 +3,53 @@ import "../styles/HeroCard.css";
 import { FcNext } from "react-icons/fc";
 import CardModal from "./CardModal";
 
-const HeroCard = ({ actors, onDelete }) => {
+const HeroCard = ({ heroes, onDelete }) => {
   const [showModal, setShowModal] = useState(false);
-  const [currentActor, setCurrentActor] = useState(null);
+  const [currentHero, setCurrentHero] = useState(null);
 
-  const handleOpenModal = (actor) => {
-    setCurrentActor(actor);
+  const handleOpenModal = (hero) => {
+    setCurrentHero(hero);
     setShowModal(true);
   };
 
   const handleCloseModal = () => {
     setShowModal(false);
-    setCurrentActor(null);
+    setCurrentHero(null);
   };
 
   return (
     <div className="cardContainer d-flex flex-wrap justify-content-evenly px-0 mx-0 mt-md-4 mt-sm-5 mb-sm-6">
-      {actors.map((actor) => (
+      {heroes.map((hero, index) => (
         <div
-          key={actor._id} // Unique identifier (use `id` instead of `name`)
+          key={index} // Unique identifier (use `id` instead of `name`)
           className="card mb-3 col-xxl-5 mb-md-4 cardCard"
           style={{ maxWidth: "540px" }}
         >
           <div className="row g-0">
             <div className="col-md-4">
               <img
-                src={actor.characterImage}
+                src={hero.characterImage}
                 className="charImg img-fluid rounded-start w-100"
-                alt={actor.name}
+                alt={hero.name}
               />
             </div>
             <div className="col-md-8">
               <div className="card-body">
                 <h5 className="card-title text-decoration-underline">
-                  {actor.name}
-                </h5> <br />
+                  {hero.name}
+                </h5>{" "}
+                <br />
                 <p className="card-text">
-                  <strong>Hero: </strong> {actor.actor}
+                  <strong>Hero: </strong> {hero.actor}
                   <br /> <br />
-                  <strong>Rating: </strong> {actor.rating}
-                </p> <br /> <br /> <br />
+                  <strong>Rating: </strong> {hero.rating}
+                </p>{" "}
+                <br /> <br /> <br />
                 <p className="card-text">
                   <span
                     className="text-decoration-none"
                     style={{ cursor: "pointer" }}
-                    onClick={() => handleOpenModal(actor)}
+                    onClick={() => handleOpenModal(hero)}
                   >
                     <small className="text-body-secondary">
                       Click to read more...
@@ -64,7 +66,7 @@ const HeroCard = ({ actors, onDelete }) => {
       {/* Modal */}
       {currentActor && (
         <CardModal
-          actor={currentActor}
+          hero={currentHero}
           show={showModal}
           closeModal={handleCloseModal}
           onDelete={onDelete}

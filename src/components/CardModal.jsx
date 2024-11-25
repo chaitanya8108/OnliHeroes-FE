@@ -3,8 +3,8 @@ import axios from "axios";
 
 const delAPI = "http://localhost:5000/actors";
 
-const CardModal = ({ actor, show, closeModal, onDelete }) => {
-  const deleteActor = async (_id) => {
+const CardModal = ({ hero, show, closeModal, onDelete }) => {
+  const deleteHero = async (_id) => {
     try {
       await axios.delete(`${delAPI}/${_id}`);
       onDelete(_id); // Notify parent of deletion
@@ -44,7 +44,7 @@ const CardModal = ({ actor, show, closeModal, onDelete }) => {
       <div className="modal-dialog">
         <div className="modal-content">
           <div className="modal-header">
-            <h5 className="modal-title">{actor.name}</h5>
+            <h5 className="modal-title">{hero.name}</h5>
             <button
               type="button"
               className="btn-close"
@@ -53,15 +53,15 @@ const CardModal = ({ actor, show, closeModal, onDelete }) => {
             ></button>
           </div>
           <div className="modal-body">
-            <img src={actor.actorImage} alt={actor.name} className="w-100" />
+            <img src={hero.actorImage} alt={hero.name} className="w-100" />
             <strong>Description</strong>
-            <p>{actor.description}</p>
+            <p>{hero.description}</p>
           </div>
           <div className="modal-footer">
             <button
               type="button"
               className="btn btn-secondary"
-              onClick={() => deleteActor(actor.id)}
+              onClick={() => deleteActor(hero.id)}
             >
               Delete
             </button>
