@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 
-const delAPI = "https://onliheroes.netlify.app/actors";
+const delAPI = "https://only-heroes-j3kj.vercel.app/actors";
 
 const CardModal = ({ hero, show, closeModal, onDelete }) => {
   const deleteHero = async (_id) => {
