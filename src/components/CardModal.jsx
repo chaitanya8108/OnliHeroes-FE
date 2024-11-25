@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 
-const delAPI = "https://only-heroes-j3kj.vercel.app/api/actors";
+const delAPI = "bucolic-quokka-527b0c.netlify.app/api/actors";
 
 const CardModal = ({ hero, show, closeModal, onDelete }) => {
   const deleteHero = async (_id) => {
@@ -65,7 +65,11 @@ const CardModal = ({ hero, show, closeModal, onDelete }) => {
             >
               Delete
             </button>
-            <button type="button" className="btn btn-primary" onClick={closeModal}>
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={closeModal}
+            >
               Update
             </button>
           </div>
