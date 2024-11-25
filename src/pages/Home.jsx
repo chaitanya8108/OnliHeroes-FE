@@ -11,19 +11,18 @@ const Home = () => {
   // Fetch data from the API
   const getData = async () => {
     try {
-      const response = await axios.get(API).then((response) => {
-        console.log(response);
-        setHeroes(response.data);
-      });
-      console.log(response);
-      // setHeroes(response.data);
+      const response = await axios.get(API);
+      console.log("Response Data:", response.data);
+
+      // Ensure it sets an array
+      setHeroes(Array.isArray(response.data) ? response.data : []);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
 
   const handleDelete = (_id) => {
-    setHeroes(actors.filter((actor) => actor._id !== _id));
+    setHeroes(heroes.filter((hero) => hero._id !== _id));
   };
 
   useEffect(() => {

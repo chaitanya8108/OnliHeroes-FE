@@ -10,7 +10,7 @@ const CardModal = ({ hero, show, closeModal, onDelete }) => {
       onDelete(_id); // Notify parent of deletion
       closeModal(); // Close modal
     } catch (error) {
-      console.error("Error deleting actor:", error);
+      console.error("Error deleting hero:", error);
     }
   };
 

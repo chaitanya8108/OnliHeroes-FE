@@ -19,9 +19,9 @@ const HeroCard = ({ heroes, onDelete }) => {
 
   return (
     <div className="cardContainer d-flex flex-wrap justify-content-evenly px-0 mx-0 mt-md-4 mt-sm-5 mb-sm-6">
-      {heroes.map((hero, index) => (
+      {heroes.map((hero) => (
         <div
-          key={index} // Unique identifier (use `id` instead of `name`)
+          key={hero._id} // Unique identifier (use `id` instead of `name`)
           className="card mb-3 col-xxl-5 mb-md-4 cardCard"
           style={{ maxWidth: "540px" }}
         >
