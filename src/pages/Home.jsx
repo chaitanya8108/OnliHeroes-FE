@@ -13,6 +13,7 @@ const Home = () => {
     try {
       const response = await axios.get(API);
       console.log("Response Data:", response.data);
+      
 
       // Ensure it sets an array
       setHeroes(Array.isArray(response.data) ? response.data : []);
