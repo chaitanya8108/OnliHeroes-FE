@@ -12,7 +12,7 @@ const configureMiddlewares = (app) => {
       methods: ["GET", "POST", "PUT", "DELETE"],
     })
   ); // Enable CORS
-  app.use("https://only-heroes-j3kj.vercel.app/actors", actorRouter); // Use actors router
+  app.use("/api/actors", actorRouter); // Use actors router
   app.use("/api/auth", userRouter); // Use users router
 };
 
