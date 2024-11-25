@@ -64,7 +64,7 @@ const HeroCard = ({ heroes, onDelete }) => {
       ))}
 
       {/* Modal */}
-      {currentActor && (
+      {currentHero && (
         <CardModal
           hero={currentHero}
           show={showModal}

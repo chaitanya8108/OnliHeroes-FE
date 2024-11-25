@@ -61,7 +61,7 @@ const CardModal = ({ hero, show, closeModal, onDelete }) => {
             <button
               type="button"
               className="btn btn-secondary"
-              onClick={() => deleteActor(hero.id)}
+              onClick={() => deleteHero(hero.id)}
             >
               Delete
             </button>
