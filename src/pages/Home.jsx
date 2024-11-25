@@ -3,7 +3,7 @@ import "../styles/Home.css";
 import axios from "axios";
 import HeroCard from "../components/HeroCard";
 
-const API = "https://only-heroes-j3kj.vercel.app/actors";
+const API = "https://only-heroes-j3kj.vercel.app/api/actors";
 
 const Home = () => {
   const [heroes, setHeroes] = useState([]);
