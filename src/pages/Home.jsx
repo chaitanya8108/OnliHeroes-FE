@@ -11,9 +11,12 @@ const Home = () => {
   // Fetch data from the API
   const getData = async () => {
     try {
-      const response = await axios.get(API);
+      const response = await axios.get(API).then((response) => {
+        console.log(response);
+        setActors(response.data);
+      });
       console.log(response.data);
-      setActors(response.data);
+      // setActors(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
