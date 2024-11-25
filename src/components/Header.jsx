@@ -9,7 +9,7 @@ const Header = () => {
         <Link to="/home">
           <IoBookSharp id="booklogo" />
         </Link>
-        <Link to="/home" id="title" style={{ userSelect: "none" }}>
+        <Link to="/api/actors" id="title" style={{ userSelect: "none" }}>
           onliHeroes
         </Link>
         <button
