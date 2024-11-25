@@ -3,7 +3,7 @@ import "../styles/Home.css";
 import axios from "axios";
 import HeroCard from "../components/HeroCard";
 
-const API = "bucolic-quokka-527b0c.netlify.app/api/actors";
+const API = "https://onli-heroes-be.vercel.app/api/actors";
 
 const Home = () => {
   const [heroes, setHeroes] = useState([]);

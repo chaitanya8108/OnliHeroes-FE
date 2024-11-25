@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 
-const delAPI = "bucolic-quokka-527b0c.netlify.app/api/auth";
+const delAPI = "https://onli-heroes-be.vercel.app/api/auth";
 
 const CardModal = ({ hero, show, closeModal, onDelete }) => {
   const deleteHero = async (_id) => {
