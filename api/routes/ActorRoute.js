@@ -3,7 +3,7 @@ const router = express.Router();
 const actorController = require("../controllers/ActorController");
 
 //route for getting all actors
-router.get("/actors", actorController.getAllActors);
+router.get("/", actorController.getAllActors);
 
 //route for getting actors by id
 router.get("/:id", actorController.getActorsById);

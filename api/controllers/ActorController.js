@@ -51,7 +51,7 @@ const addActors = async (req, res, next) => {
     console.log(error);
   }
 
-  if (!Actor) {
+  if (!actors) {
     res.status(500).json({ message: "Failed to add the Actor" });
   }
   return res.status(201).json(actors);
