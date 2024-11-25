@@ -13,9 +13,9 @@ const Home = () => {
     try {
       const response = await axios.get(API).then((response) => {
         console.log(response);
-        setActors(response.data);
+        setActors(response);
       });
-      console.log(response.data);
+      console.log(response);
       // setActors(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
